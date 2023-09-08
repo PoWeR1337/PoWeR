@@ -5,11 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Meteor Debugger",
-            "type": "dotnet-meteor.debugger",
+            "type": "cscs",
             "request": "launch",
-            "preLaunchTask": "dotnet-meteor: Build"
+            "name": "CSCS Launch",
+            "program": "${workspaceFolder}/${command:RunLocal}",
+            "stopOnEntry": true,
+            "connectType": "sockets",
+            "serverPort": 13337,
+            "serverHost": "127.0.0.1",
+            "serverBase": ""
         },
+        
         {
             "name": ".NET Meteor Debugger",
             "type": "dotnet-meteor.debugger",
